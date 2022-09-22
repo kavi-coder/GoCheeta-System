@@ -1,0 +1,9 @@
+package com.example.demo.controller.admin;
+
+import com.example.demo.controller.customer.Customer;
+
+public interface AdminServices {
+
+	Admin adminlogin(String email, String password);
+
+}

@@ -1,0 +1,29 @@
+package com.example.demo.controller.vehicle;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class VehicleServicesImplemetation implements VehicleServices{
+	
+	@Autowired
+	private Vehicle_Repository repo;
+
+	@Override
+	public List<Vehicle> avalibleVehicles(String branch) {
+		List<Vehicle> all=repo.findAll();
+		List<Vehicle> filter=new ArrayList<Vehicle>();
+		
+		for(int i=0;i<all.size();i++) {
+			if(all.get(i).getAvalibility()==1 && all.get(i).getBranch().equalsIgnoreCase(branch)) {
+				filter.add(all.get(i));
+			}
+		}
+		
+		return filter;
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.example.demo.controller.customer;
+
+import java.util.List;
+
+public interface CustomerServices {
+
+	List<Customer> findAllCustomers();
+
+}

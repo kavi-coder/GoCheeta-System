@@ -1,0 +1,13 @@
+package com.example.demo.controller.customer;
+
+import java.util.List;
+
+public interface CustomerServices {
+
+	List<Customer> findAllCustomers();
+
+	Customer login(String email, String password);
+
+	String addCustomer(Customer customer_data);
+
+}

@@ -1,0 +1,15 @@
+package com.example.demo.controller.branchAdmin;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="branchadmin")
+public class BranchAdmin {
+	private int branch_id;
+	private String branch_admin_name;
+	private String branch_name;
+	private String branch_email;
+	private String branch_password;
+	
+}

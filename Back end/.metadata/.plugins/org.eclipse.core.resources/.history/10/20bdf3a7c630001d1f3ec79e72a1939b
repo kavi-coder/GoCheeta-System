@@ -1,0 +1,9 @@
+package com.example.demo.controller.vehicle;
+
+import java.util.List;
+
+public interface VehicleServices {
+
+	List<Vehicle> avalibleVehicles(String branch);
+
+}

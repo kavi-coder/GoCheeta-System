@@ -1,0 +1,15 @@
+package com.example.demo.controller.driver;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class DriverServiceImplementation implements DriverService {
+	
+	@Autowired
+	private Driver_Repository repo;
+
+
+}

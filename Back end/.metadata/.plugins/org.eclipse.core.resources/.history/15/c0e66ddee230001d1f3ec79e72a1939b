@@ -1,0 +1,9 @@
+package com.example.demo.controller.branchAdmin;
+
+import com.example.demo.controller.customer.Customer;
+
+public interface BranchAdminServices {
+
+	Customer branchadminlogin(String email, String password);
+
+}

@@ -1,0 +1,7 @@
+package com.example.demo.controller.driver;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface Driver_Repository extends JpaRepository<Driver, Integer>{
+
+}

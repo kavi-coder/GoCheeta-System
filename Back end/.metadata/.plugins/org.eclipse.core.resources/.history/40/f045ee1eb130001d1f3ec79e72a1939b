@@ -1,0 +1,36 @@
+package com.example.demo.controller.driver;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.controller.vehicle.Vehicle;
+
+@Service
+public class DriverServiceImplementation implements DriverService {
+	
+	@Autowired
+	private Driver_Repository repo;
+
+	@Override
+	public List<Driver> avalibleVehicles(String branch) {
+		List<Driver> all=repo.findAll();
+		List<Driver> filter=new ArrayList<Driver>();
+		
+		for(int i=0;i<all.size();i++) {
+			if(all.get(i).getAvalibility()==1 && all.get(i).getBranch().equalsIgnoreCase(branch)) {
+				filter.add(all.get(i));
+			}
+		}
+		
+		if(filter.size()==0) {
+			return null;
+		}
+		
+		return filter;
+	}
+
+
+}

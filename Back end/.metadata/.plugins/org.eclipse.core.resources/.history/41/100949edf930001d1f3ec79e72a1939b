@@ -1,0 +1,104 @@
+package com.example.demo.controller.vehicle;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class VehicleServicesImplemetation implements VehicleServices{
+	
+	@Autowired
+	private Vehicle_Repository repo;
+
+	@Override
+	public List<Vehicle> avalibleVehicles(String branch) {
+		List<Vehicle> all=repo.findAll();
+		List<Vehicle> filter=new ArrayList<Vehicle>();
+		
+		for(int i=0;i<all.size();i++) {
+			if(all.get(i).getAvalibility()==1 && all.get(i).getBranch().equalsIgnoreCase(branch)) {
+				filter.add(all.get(i));
+			}
+		}
+		
+		if(filter.size()==0) {
+			return null;
+		}
+		
+		return filter;
+	}
+	
+	//get vehicle details
+	@Override
+	public Vehicle getVehicle(int id) {
+		List<Vehicle> all=repo.findAll();
+		
+		for(int i=0;i<all.size();i++) {
+			if(id==all.get(i).getId()) {
+				return all.get(i);
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public String updateVehicleAvalibility(int id, int avalibility) {
+		Vehicle vehicle=getVehicle(id);
+		
+		if(vehicle != null) {
+			vehicle.setAvalibility(avalibility);
+			repo.save(vehicle);
+			return "Vehicle Detail Updated";
+		}
+		else {
+			return "Vehicle Not Found";
+		}
+	}
+
+	@Override
+	public List<Vehicle> branchVehicles(String branch) {
+		List<Vehicle> all=repo.findAll();
+		List<Vehicle> filter=new ArrayList<Vehicle>();
+		
+		for(int i=0;i<all.size();i++) {
+			if(all.get(i).getBranch().equalsIgnoreCase(branch)) {
+				filter.add(all.get(i));
+			}
+		}
+		
+		if(filter.size()==0) {
+			return null;
+		}
+		
+		return filter;
+	}
+
+	@Override
+	public String deleteVehicle(Integer id) {
+		List<Vehicle> all=repo.findAll();
+		
+		for(Vehicle b:all) {
+			if(id==b.getId()) {
+				repo.delete(b);
+				return "Deleted";
+			}
+		}
+		return "Vehicle Not Found";
+	}
+
+	@Override
+	public String vehicleAdd(Vehicle vehicle_data) {
+		List<Customer> all=repo.findAll();
+		
+		for(int i=0;i<all.size();i++) {
+			if(all.get(i).getCust_email().equalsIgnoreCase(customer_data.getCust_email())) {
+				return "Use Another Email";
+			}
+		}
+		repo.save(customer_data);
+		return "Customer Added";
+	}
+
+}

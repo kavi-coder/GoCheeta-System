@@ -1,0 +1,11 @@
+package com.example.demo.controller.driver;
+
+import java.util.List;
+
+import com.example.demo.controller.vehicle.Vehicle;
+
+public interface DriverService{
+
+	List<Vehicle> avalibleVehicles(String branch);
+
+}

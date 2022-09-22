@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.EnableAspectJAutoProxy"/>
+    <fullyQualifiedTypeName name="com.example.demo.controller.customer.Customer"/>
+    <fullyQualifiedTypeName name="com.example.demo.controller.customer.CustomerServices"/>
+    <fullyQualifiedTypeName name="com.example.demo.controller.customer.Customer_Repository"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
+    <fullyQualifiedTypeName name="com.example.demo.controller.vehicle.VehicleServices"/>
+    <fullyQualifiedTypeName name="com.example.demo.controller.vehicle.Vehicle_Repository"/>
+    <fullyQualifiedTypeName name="com.example.demo.controller.driver.DriverService"/>
+    <fullyQualifiedTypeName name="com.example.demo.controller.driver.Driver_Repository"/>
+    <fullyQualifiedTypeName name="com.example.demo.controller.driver.Driver"/>
+    <fullyQualifiedTypeName name="com.example.demo.controller.bookings.BookingServices"/>
+    <fullyQualifiedTypeName name="com.example.demo.controller.bookings.Booking_Repository"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="com.example.demo.controller.branchAdmin.BranchAdminServices"/>
+    <fullyQualifiedTypeName name="com.example.demo.controller.branchAdmin.BranchAdmin_Repository"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.Table"/>
+    <fullyQualifiedTypeName name="javax.persistence.Id"/>
+    <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="javax.persistence.Column"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="com.example.demo.controller.admin.AdminServices"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.example.demo.controller.admin.Admin_Repository"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.example.demo.controller.bookings.Booking"/>
+    <fullyQualifiedTypeName name="com.example.demo.controller.vehicle.Vehicle"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.example.demo.controller.branchAdmin.BranchAdmin"/>
+    <fullyQualifiedTypeName name="com.example.demo.controller.admin.Admin"/>
+</qualifiedTypeNameHistroy>

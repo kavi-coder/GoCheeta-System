@@ -1,0 +1,30 @@
+package com.example.demo.controller.branchAdmin;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="branchadmin")
+public class BranchAdmin {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="branch_id")
+	private int branch_id;
+	
+	@Column(name="branch_admin_name")
+	private String branch_admin_name;
+	
+	@Column(name="branch_name")
+	private String branch_name;
+	
+	@Column(name="branch_email")
+	private String branch_email;
+	
+	@Column(name="branch_password")
+	private String branch_password;
+	
+}

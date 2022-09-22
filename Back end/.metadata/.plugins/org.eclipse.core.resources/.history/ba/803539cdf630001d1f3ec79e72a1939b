@@ -1,0 +1,15 @@
+package com.example.demo.controller.admin;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="admin")
+public class Admin {
+	private int admin_id;
+	private String admin_name;
+	private String admin_email;
+	private String admin_password;
+	
+	
+}

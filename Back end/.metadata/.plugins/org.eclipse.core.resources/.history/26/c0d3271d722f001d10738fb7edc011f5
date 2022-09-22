@@ -1,0 +1,18 @@
+package com.example.demo.controller.vehicle;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class VehicleServicesImplemetation implements VehicleServices{
+	
+	@Autowired
+	private Vehicle_Repository repo;
+
+	@Override
+	public List<Vehicle> avalibleVehicles() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

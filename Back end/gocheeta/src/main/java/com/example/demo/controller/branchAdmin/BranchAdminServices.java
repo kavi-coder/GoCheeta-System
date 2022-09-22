@@ -1,0 +1,19 @@
+package com.example.demo.controller.branchAdmin;
+
+import java.util.List;
+
+public interface BranchAdminServices {
+
+	BranchAdmin branchadminlogin(String email, String password);
+
+	BranchAdmin getBranchAdmin(int id);
+
+	String updateBranchAdmin(BranchAdmin branch_admin);
+
+	List<BranchAdmin> allbranchadmins();
+
+	String addbranchadmin(BranchAdmin admin);
+
+	List<BranchAdmin> branchadmins(String branch);
+
+}

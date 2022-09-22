@@ -1,0 +1,7 @@
+package com.example.demo.controller.bookings;
+
+public interface BookingServices {
+
+	String addBooking(Booking booking_data);
+
+}

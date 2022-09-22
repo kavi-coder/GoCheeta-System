@@ -1,0 +1,13 @@
+package com.example.demo.controller.vehicle;
+
+import java.util.List;
+
+public class VehicleServicesImplemetation implements VehicleServices{
+
+	@Override
+	public List<Vehicle> avalibleVehicles() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

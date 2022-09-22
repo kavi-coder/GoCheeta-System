@@ -1,0 +1,11 @@
+package com.example.demo.controller.bookings;
+
+public class Booking {
+
+	private int id;
+	private int user_id;
+	private int driver_id;
+	private String pick_up;
+	private String destination;
+	private int vehicle_type;
+}

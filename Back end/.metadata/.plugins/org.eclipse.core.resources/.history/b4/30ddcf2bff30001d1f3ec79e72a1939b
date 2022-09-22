@@ -1,0 +1,50 @@
+package com.example.demo.controller.branchAdmin;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class BranchAdminServicesImplementation implements BranchAdminServices {
+	@Autowired
+	private BranchAdmin_Repository repo;
+
+	@Override
+	public BranchAdmin branchadminlogin(String email, String password) {
+		List<BranchAdmin> all=repo.findAll();
+		
+		for(int i=0;i<all.size();i++) {
+			if(all.get(i).getBranch_email().equalsIgnoreCase(email) && all.get(i).getBranch_password().equals(password)) {
+				return all.get(i);
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public BranchAdmin getBranchAdmin(int id) {
+		List<BranchAdmin> all=repo.findAll();
+		
+		for(int i=0;i<all.size();i++) {
+			if(all.get(i).getBranch_id()==id) {
+				return all.get(i);
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public String updateBranchAdmin(BranchAdmin branch_admin) {
+		BranchAdmin branchadmin=getBranchAdmin(id);
+		
+		if(branchadmin != null) {
+			repo.save(branchadmin);
+			return "Branch Admin Detail Updated";
+		}
+		else {
+			return "Branch Admin Not Found";
+		}	
+	}
+
+}

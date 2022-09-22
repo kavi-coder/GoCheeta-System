@@ -1,0 +1,219 @@
+body{
+    padding: 0.2em;
+    background-image: url('../img/output-onlinepngtools\ \(1\).png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login{
+    display: block;
+}
+.login form{
+    padding: 1em;
+    border: 1px solid black;
+    width: 20em;
+    margin: 0 auto;
+}
+.login input{
+    margin: 1em auto;
+    display: block;
+    margin-left: 0em;
+}
+form{
+    margin-bottom: 3em;
+}
+form button{
+    display: block;
+    margin-top: 1em;
+}
+
+#errors{
+    text-align: center;
+    color: red;
+}
+.navbar h1{
+    color: #fff;
+    cursor: pointer;
+    margin-top: 0;
+}
+h2{
+    text-align: center;
+}
+
+#userName{
+    color: green;
+}
+.navbar{
+    margin-bottom: 1em;
+    background-color: #333;
+    padding: 0em 0.5em;
+}
+.navbar ul {
+    /* width: 10em; */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    padding-right: 2em;
+}
+.navbar li {
+    float: right;
+    /* width: 10em; */
+}
+.navbar h1 a{
+    float: left;
+    color: #fff;
+    text-decoration: none;
+}
+.navbar h1 a:hover{
+    color: yellow;
+}
+.navbar li p{
+    color: white;
+}
+.navbar  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+}
+.navbar li a:hover {
+    color: red;
+    background-color: #111;
+}
+
+.home{
+    text-align: center;
+    margin: auto;
+}
+.home form select{
+    display: block;
+    margin: 5px auto;
+}
+
+
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+.ordernow{
+    margin: 0em auto;
+    padding: 0.5em 1em;
+}
+.ordernow h2{
+    text-align: center;
+}
+.ordernow h4{
+    margin: 0;
+    padding: 0;
+    margin-top: 1em;
+}
+.ordernow p{
+    margin: 0;
+    padding: 0;
+}
+.ordernow table{
+    width: 100%;
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ordernow table td{
+    width: auto;
+}
+.ordernow table th{
+    text-align: center;
+    color: #04AA6D;
+}
+.ordernow table tr input{
+    width: 18em;
+}
+.ordernow table tr textarea{
+    width: 18em;
+    height: 9em;
+}
+
+
+.account{
+    margin: 1em auto;
+    width: 100%;
+}
+.account form h4{
+    margin: 0;
+    margin-top: 1em;
+}
+.account input,.account p{
+   margin-top: 0.2em;
+}
+
+
+.createacc h2{
+    text-align: center;
+}
+.createacc{
+    margin: 1em auto;
+    width: 20%;
+}
+.createacc form h4{
+    margin: 0;
+    margin-top: 1em;
+}
+.createacc input,.createacc p{
+   margin-top: 0.2em;
+}
+
+.myorders{
+    padding: 0.5em;
+    padding-bottom: 2em;
+}
+
+
+.salesdashboard table{
+    /* padding: 0 1em; */
+    font-size: 80%;
+    /* width: 95%; */
+}
+
+.confirm table{
+    width: 100%;
+}
+.confirm table p button{
+    text-align: center;
+}
+
+.salesdashboard table{
+    margin-bottom: 2em;
+}
+
+
+.admin button{
+    margin: 1em 1em;
+    display: inline-block;
+}

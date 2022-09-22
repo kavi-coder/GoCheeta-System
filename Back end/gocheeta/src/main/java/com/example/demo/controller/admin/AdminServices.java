@@ -1,0 +1,11 @@
+package com.example.demo.controller.admin;
+
+public interface AdminServices {
+
+	Admin adminlogin(String email, String password);
+
+	Admin getadmin(int id);
+
+	String updateadmin(Admin admin);
+
+}

@@ -1,0 +1,19 @@
+package com.example.demo.controller.bookings;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class BookingServicesImplementation implements BookingServices {
+	@Autowired
+	private Booking_Repository repo;
+	
+	@Override
+	public String addBooking(Booking booking_data) {
+		repo.save(booking_data);
+		return "Customer Added";
+	}
+
+}

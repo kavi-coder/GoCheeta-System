@@ -1,0 +1,85 @@
+package com.example.demo.controller.bookings;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="bookings")
+public class Booking {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="id")
+	private int id;
+	
+	@Column(name="user_id")
+	private int user_id;
+	
+	@Column(name="driver_id")
+	private int driver_id;
+	
+	@Column(name="pick_up")
+	private String pick_up;
+	
+	@Column(name="destination")
+	private String destination;
+	
+	@Column(name="vehicle_id")
+	private int vehicle_id;
+
+	
+
+	
+	//getters setters
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getUser_id() {
+		return user_id;
+	}
+
+	public void setUser_id(int user_id) {
+		this.user_id = user_id;
+	}
+
+	public int getDriver_id() {
+		return driver_id;
+	}
+
+	public void setDriver_id(int driver_id) {
+		this.driver_id = driver_id;
+	}
+
+	public String getPick_up() {
+		return pick_up;
+	}
+
+	public void setPick_up(String pick_up) {
+		this.pick_up = pick_up;
+	}
+
+	public String getDestination() {
+		return destination;
+	}
+
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+
+	public int getVehicle_id() {
+		return vehicle_id;
+	}
+
+	public void setVehicle_id(int vehicle_id) {
+		this.vehicle_id = vehicle_id;
+	}
+}

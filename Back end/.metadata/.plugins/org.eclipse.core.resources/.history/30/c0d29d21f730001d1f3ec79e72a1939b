@@ -1,0 +1,171 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.controller.bookings.Booking;
+import com.example.demo.controller.bookings.BookingServices;
+import com.example.demo.controller.branchAdmin.BranchAdmin;
+import com.example.demo.controller.branchAdmin.BranchAdminServices;
+import com.example.demo.controller.customer.Customer;
+import com.example.demo.controller.customer.CustomerServices;
+import com.example.demo.controller.driver.Driver;
+import com.example.demo.controller.driver.DriverService;
+import com.example.demo.controller.vehicle.Vehicle;
+import com.example.demo.controller.vehicle.VehicleServices;
+
+@RestController
+@RequestMapping
+@CrossOrigin
+public class Controller {
+	@Autowired
+	private CustomerServices cust_services;
+	@Autowired
+	private VehicleServices vehicle_services;
+	@Autowired
+	private DriverService driver_services;
+	@Autowired
+	private BookingServices booking_services;
+	@Autowired
+	private BranchAdminServices branchAdmin_services;
+	
+	
+	//customer
+	@GetMapping("/findAllCustomers")
+	public List<Customer> findAllCustomers() {
+		return cust_services.findAllCustomers();
+	}
+	
+	@PostMapping("/customerAdd")
+	public String addCustomer(@RequestBody Customer customer_data) {
+		return cust_services.addCustomer(customer_data);
+	}
+	
+	@GetMapping(value="/login/{email}/{password}")
+	public Customer login(@PathVariable String email,@PathVariable String password) {
+		System.out.println(email);
+		System.out.println(password);
+		return cust_services.login(email,password);
+	}
+	
+	@PutMapping(value="/update")
+	public String updateUser(@RequestBody Customer userData) {
+		return cust_services.updateUser(userData);
+	}
+	
+	@DeleteMapping(value="/delete/{id}")
+	public String delete(@PathVariable Integer id) {
+		return cust_services.delete(id);
+	}
+	
+	@GetMapping("/getUser/{id}")
+	public Customer getUser(@PathVariable int id) {
+		return cust_services.getUser(id);
+	}
+	
+	@GetMapping("/checkemail/{email}")
+	public Customer checkemail(@PathVariable String email) {
+		return cust_services.checkemail(email);
+	}
+	
+	
+	//vehicle
+	@GetMapping("/avalibleVehicles/{branch}")
+	public List<Vehicle> avalibleVehicles(@PathVariable String branch) {
+		return vehicle_services.avalibleVehicles(branch);
+	}
+	
+	@GetMapping("/branchVehicles/{branch}")
+	public List<Vehicle> branchVehicles(@PathVariable String branch) {
+		return vehicle_services.branchVehicles(branch);
+	}
+	
+	@GetMapping("/getVehicle/{id}")
+	public Vehicle getVehicle(@PathVariable int id) {
+		return vehicle_services.getVehicle(id);
+	}
+	
+	@PutMapping(value="/updateVehicleAvalibility/{id}/{avalibility}")
+	public String updateVehicleAvalibility(@PathVariable int id, @PathVariable int avalibility) {
+		return vehicle_services.updateVehicleAvalibility(id,avalibility);
+	}
+	
+	@DeleteMapping(value="/deleteVehicle/{id}")
+	public String deleteVehicle(@PathVariable Integer id) {
+		return vehicle_services.deleteVehicle(id);
+	}
+	
+	
+	
+	//driver
+	@GetMapping("/avalibleDrivers/{branch}")
+	public List<Driver> avalibleDrivers(@PathVariable String branch) {
+		return driver_services.avalibleVehicles(branch);
+	}
+	
+	@GetMapping("/getDriver/{id}")
+	public Driver getDriver(@PathVariable int id) {
+		return driver_services.getDriver(id);
+	}
+	
+	@PutMapping(value="/updateDriverAvalibility/{id}/{avalibility}")
+	public String updateDriverAvalibility(@PathVariable int id, @PathVariable int avalibility) {
+		return driver_services.updateDriverAvalibility(id,avalibility);
+	}
+	
+	
+	
+	//bookings
+	@GetMapping("/findAllBookings")
+	public List<Booking> findAllBookings() {
+		return booking_services.findAllBookings();
+	}
+	
+	@GetMapping("/findBookings/{id}")
+	public List<Booking> findBookings(@PathVariable int id) {
+		return booking_services.findBookings(id);
+	}
+	
+	@GetMapping("/bookingVehicleSearch/{vehicle_id}")
+	public boolean bookingVehicleSearch(@PathVariable int vehicle_id) {
+		return booking_services.bookingVehicleSearch(vehicle_id);
+	}
+	
+	@GetMapping("/findBranchBookings/{branch}")
+	public List<Booking> findBranchBookings(@PathVariable String branch) {
+		return booking_services.findBranchBookings(branch);
+	}
+	
+	@PostMapping("/addBooking")
+	public String addBooking(@RequestBody Booking booking_data) {
+		return booking_services.addBooking(booking_data);
+	}
+	
+	@DeleteMapping(value="/deleteBooking/{id}")
+	public String deleteBooking(@PathVariable int id) {
+		return booking_services.deleteBooking(id);
+	}
+	
+	
+	//branch admin
+	@GetMapping(value="/branchadminlogin/{email}/{password}")
+	public BranchAdmin branchadminlogin(@PathVariable String email,@PathVariable String password) {
+		return branchAdmin_services.branchadminlogin(email,password);
+	}
+	
+	//admin
+	@GetMapping(value="/adminlogin/{email}/{password}")
+	public Customer adminlogin(@PathVariable String email,@PathVariable String password) {
+		return cust_services.adminlogin(email,password);
+	}
+}

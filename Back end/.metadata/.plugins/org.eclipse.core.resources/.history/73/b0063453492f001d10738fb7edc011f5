@@ -1,0 +1,5 @@
+package com.example.demo.controller.customer;
+
+public interface Customer_Repository {
+
+}

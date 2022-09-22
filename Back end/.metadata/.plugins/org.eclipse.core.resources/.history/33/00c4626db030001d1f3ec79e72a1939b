@@ -1,0 +1,18 @@
+package com.example.demo.controller.driver;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.controller.vehicle.Vehicle;
+
+@Service
+public class DriverServiceImplementation implements DriverService {
+
+	@Override
+	public List<Vehicle> avalibleVehicles(String branch) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
